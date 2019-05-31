@@ -7,8 +7,9 @@ import json
 
 from hyperparams import Hyperparams
 
-hp = Hyperparams()
-model_id = sys.argv[1]
+prj_name = sys.argv[1]
+hp = Hyperparams(prj_name)
+model_id = sys.argv[2]
 RAW_MODEL_DIR = hp.train_params["model_path"]
 MODEL_DIR = "%s/model-%s" % (RAW_MODEL_DIR, model_id)
 PB_MODEL_DIR = "%s_pb" % RAW_MODEL_DIR

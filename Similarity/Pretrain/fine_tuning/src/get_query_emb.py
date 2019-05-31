@@ -11,9 +11,10 @@ import time
 from hyperparams import Hyperparams
 import data_helper as dh
 
-model_id = int(sys.argv[1])
+prj_name = sys.argv[1]
+model_id = int(sys.argv[2])
 
-hp = Hyperparams()
+hp = Hyperparams(prj_name)
 tf.flags.DEFINE_string("kdb_file", hp.train_params["kdb_file"], "Data for the training data.")
 tf.flags.DEFINE_string("model_path", hp.train_params["model_path"], "Path to save model")
 tf.flags.DEFINE_integer("embedding_size", hp.model_params["embedding_size"], "Size of embedding for token/position")

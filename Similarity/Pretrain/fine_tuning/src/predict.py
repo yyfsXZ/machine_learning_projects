@@ -11,9 +11,10 @@ import time
 from hyperparams import Hyperparams
 import data_helper as dh
 
-model_id = int(sys.argv[1])
+prj_name = sys.argv[1]
+model_id = int(sys.argv[2])
 
-hp = Hyperparams()
+hp = Hyperparams(prj_name)
 tf.flags.DEFINE_string("test_file", hp.train_params["test_file"], "Data for the training data.")
 tf.flags.DEFINE_string("model_path", hp.train_params["model_path"], "Path to save model")
 tf.flags.DEFINE_string("pretrained_embedding_file", hp.train_params["pretrained_embedding_file"], "Pretrained embeddings for querys")
