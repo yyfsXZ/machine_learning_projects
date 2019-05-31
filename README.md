@@ -22,7 +22,15 @@
     
 ## 项目相关目录
 
-### keyword_extraction: 关键词抽取项目
+### Similarity
+
+#### Pretrain
+  1. biLSTM_conv_network：使用BiLSTM+CONV做隐藏层进行auto-encoder的方法
+  2. fine_tuning：fine tuning代码
+
+### NewWordExtractor: 新词发现项目
+
+### KeywordExtraction: 关键词抽取项目
   待开发
 
 ### pre_train: 预训练项目
