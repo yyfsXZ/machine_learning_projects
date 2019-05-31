@@ -20,7 +20,8 @@ from CommonLibs import ModelUtils
 from CommonLibs import Metrix
 from CommonLibs import OtherUtils
 
-hp = Hyperparams()
+prj_name = sys.argv[1]
+hp = Hyperparams(prj_name)
 tf.flags.DEFINE_string("train_file", hp.train_params["train_file"], "Data for the training data.")
 tf.flags.DEFINE_string("valid_file", hp.train_params["valid_file"], "Data for validation")
 

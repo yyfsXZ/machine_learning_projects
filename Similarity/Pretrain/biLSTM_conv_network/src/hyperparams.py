@@ -2,14 +2,15 @@
 #coding=utf-8
 
 class Hyperparams:
-    def __init__(self):
+    def __init__(self, prj_name):
+        self.prj_name = prj_name
         self.train_params = {
-            "train_file": "../prj/data/train.txt",
-            "test_file": "../prj/data/test.txt",
-            "valid_file": "../prj/data/valid.txt",
-            "kdb_file": "../prj/data/kdb.txt",
-            "model_path": "../prj/model/",
-            "log_path": "../prj/log/",
+            "train_file": "../%s/data/train.txt" % self.prj_name,
+            "test_file": "../%s/data/test.txt" % self.prj_name,
+            "valid_file": "../%s/data/valid.txt" % self.prj_name,
+            "kdb_file": "../%s/data/kdb.txt" % self.prj_name,
+            "model_path": "../%s/model/" % self.prj_name,
+            "log_path": "../%s/log/" % self.prj_name,
             "learning_rate": 0.00001,
             "epochs": 20,
             "batch_size": 96,
