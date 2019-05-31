@@ -5,10 +5,10 @@ import os
 
 from hyperparams import Hyperparams as hp
 
-MODEL_DIR = hp.model_path
+MODEL_ROOT = hp.model_path
 model_id = sys.argv[1]
-MODEL_DIR = "%s/model-%s" % (MODEL_DIR, model_id)
-PB_MODEL_DIR = "%s_pb" % MODEL_DIR
+MODEL_DIR = "%s/model-%s" % (MODEL_ROOT, model_id)
+PB_MODEL_DIR = "%s_pb" % MODEL_ROOT
 if os.path.exists(PB_MODEL_DIR):
     os.system("rm -rf %s" % PB_MODEL_DIR)
 
